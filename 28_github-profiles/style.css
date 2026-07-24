@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #222;
+  color: #fafafa;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.user-form {
+  width: 100%;
+  max-width: 700px;
+
+  input {
+    width: 100%;
+    display: block;
+    background: #333;
+    border: none;
+    border-radius: 10px;
+    color: #fafafa;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    font-family: inherit;
+    font-size: 1rem;
+    box-shadow:
+      0 5px 10px rgba(154, 160, 185, 0.05),
+      0 15px 40px rgba(0, 0, 0, 0.1);
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: #afafb0;
+    }
+  }
+}
+
+.card {
+  max-width: 800px;
+  background: #333;
+  border-radius: 20px;
+  box-shadow:
+    0 5px 10px rgba(154, 160, 185, 0.05),
+    0 15px 40px rgba(0, 0, 0, 0.1);
+  display: flex;
+  padding: 3rem;
+  margin: 0 1.5rem;
+
+  .avatar {
+    border-radius: 50%;
+    border: 10px solid #47474f;
+    height: 150px;
+    width: 150px;
+  }
+
+  .user-info {
+    color: #eee;
+    margin-left: 2rem;
+
+    h2 {
+      margin-top: 0;
+    }
+
+    p {
+      margin: 1rem 0;
+      color: #e0e0e0;
+    }
+
+    ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: space-between;
+      padding: 0;
+      max-width: 400px;
+      margin-bottom: 1rem;
+
+      li {
+        display: flex;
+        align-items: center;
+        color: #cacaca;
+
+        strong {
+          font-size: 0.8rem;
+          margin-left: 0.25rem;
+        }
+      }
+    }
+  }
+
+  .repo {
+    text-decoration: none;
+    color: #fafafa;
+    background: #484862;
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+  }
+}
+
+@media (max-width: 500px) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .user-form {
+    max-width: 400px;
+  }
+}
